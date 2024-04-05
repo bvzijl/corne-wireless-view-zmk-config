@@ -42,39 +42,50 @@
 &none  &kp Q                 &kp W             &kp F          &kp P               &kp B        &kp J         &kp L                &kp U          &kp Y              &kp APOSTROPHE     &none
 &none  &hrml LG(LEFT_GUI) A  &hrml LEFT_ALT R  &hrml LCTRL S  &hrml LEFT_SHIFT T  &kp G        &kp M         &hrmr RIGHT_SHIFT N  &hrmr RCTRL E  &hrmr RIGHT_ALT I  &hrmr RIGHT_GUI O  &none
 &none  &kp Z                 &kp X             &kp C          &kp D               &kp V        &kp K         &kp H                &kp COMMA      &kp DOT            &kp FSLH           &none
-                                               &kp ESC        &kp TAB             &kp SPACE    &lt 3 RETURN  &lt 2 BACKSPACE      &lt 1 DELETE
+                                               &kp ESC        &lt 4 TAB           &kp SPACE    &lt 3 RETURN  &lt 2 BACKSPACE      &lt 1 DELETE
             >;
         };
 
         function {
             label = "FUNCTION";
             bindings = <
-&none  &kp F12  &kp F7  &kp F8  &kp F9  &none     &none         &none            &none         &none          &none          &none
-&none  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &none         &kp RIGHT_SHIFT  &kp RCTRL     &kp RIGHT_ALT  &kp RIGHT_GUI  &none
-&none  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
-                        &none   &trans  &trans    &none         &none            &none
+&none         &kp F12  &kp F7  &kp F8  &kp F9  &none     &none         &none            &none         &none          &none          &none
+&kp CAPSLOCK  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &none         &kp RIGHT_SHIFT  &kp RCTRL     &kp RIGHT_ALT  &kp RIGHT_GUI  &none
+&none         &kp F10  &kp F1  &kp F2  &kp F3  &trans    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+                               &none   &trans  &trans    &none         &none            &none
             >;
         };
 
         number {
             label = "NUMBER";
             bindings = <
-&none  &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS     &none   &none   &none   &none   &none   &none
-&none  &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS      &none   &none   &none   &none   &trans  &trans
-&none  &kp COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &trans  &trans  &trans  &trans  &trans
-                                   &none         &kp NUMBER_0  &kp ENTER     &none   &trans  &none
+&none  &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACKET    &none   &none   &none   &none   &none   &none
+&none  &kp SEMICOLON     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL            &none   &none   &none   &none   &trans  &trans
+&none  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &trans  &trans  &trans  &trans  &trans  &trans
+                                       &none         &kp NUMBER_0  &kp MINUS            &none   &trans  &none
             >;
         };
 
         symbol {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+&kp  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &kp  &kp  &kp  &kp  &kp  &kp
+&kp  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &kp  &kp  &kp  &kp  &kp  &kp
+&kp  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE           &kp  &kp  &kp  &kp  &kp  &kp
+                                      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &kp  &kp  &kp
             >;
 
             label = "SYMBOL";
+        };
+
+        nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_REDO  &kp K_COPY     &kp K_PASTE  &kp K_CUT  &kp K_UNDO  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans      &trans
+                        &trans  &trans  &trans    &kp ENTER   &kp BACKSPACE  &kp DELETE
+            >;
+
+            label = "NAV";
         };
     };
 };
